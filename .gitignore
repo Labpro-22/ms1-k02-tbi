@@ -1,0 +1,266 @@
+# -----------------------------------------------------------------------------
+# GRADLE
+# -----------------------------------------------------------------------------
+.gradle/
+gradle-app.setting
+!gradle/wrapper/gradle-wrapper.jar
+!gradle/wrapper/gradle-wrapper.properties
+build/
+**/build/
+local.properties
+gradle.properties.local
+
+# Gradle cache & daemon
+**/.gradle/
+gradle/wrapper/dists/
+gradle/caches/
+
+# Kotlin Gradle Plugin
+**/.kotlin/
+
+
+# -----------------------------------------------------------------------------
+# ANDROID STUDIO / INTELLIJ IDEA
+# -----------------------------------------------------------------------------
+.idea/
+*.iml
+*.ipr
+*.iws
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/gradle.xml
+.idea/assetWizardSettings.xml
+.idea/dictionaries/
+.idea/libraries/
+.idea/caches/
+.idea/modules/
+.idea/navEditor.xml
+.idea/codeStyles/
+.idea/inspectionProfiles/
+.idea/misc.xml
+.idea/runConfigurations/
+.idea/vcs.xml
+.idea/deploymentTargetDropDown.xml
+.idea/compiler.xml
+.idea/encodings.xml
+.idea/jarRepositories.xml
+.idea/kotlinc.xml
+
+# !.idea/codeStyles/codeStyleConfig.xml
+# !.idea/codeStyles/Project.xml
+
+
+# -----------------------------------------------------------------------------
+# ANDROID BUILD OUTPUTS
+# -----------------------------------------------------------------------------
+*.apk
+*.aab
+*.ap_
+*.dex
+*.class
+
+# Generated source files
+**/gen/
+**/generated/
+**/R.java
+**/BuildConfig.java
+
+# ProGuard
+proguard/
+**/proguard-rules.pro.bak
+**/mapping.txt
+**/seeds.txt
+**/usage.txt
+
+# Android Test results
+**/test-results/
+**/androidTest-results/
+
+
+# -----------------------------------------------------------------------------
+# SIGNING & SECRETS
+# -----------------------------------------------------------------------------
+*.jks
+*.keystore
+*.p12
+*.pfx
+keystore.properties
+signing.properties
+secrets.properties
+google-services.json
+google-services-debug.json
+
+# Local environment / API keys
+.env
+.env.local
+.env.*
+local.defaults.properties
+apikeys.xml
+*.local.*
+
+# Encrypted SharedPreferences master key backups (should never leave device)
+*.encrypted
+
+
+# -----------------------------------------------------------------------------
+# OS FILES
+# -----------------------------------------------------------------------------
+
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+*.AppleDouble
+*.LSOverride
+Icon?
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msm
+*.msp
+*.lnk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+
+# -----------------------------------------------------------------------------
+# KOTLIN / JVM
+# -----------------------------------------------------------------------------
+*.jar
+hs_err_pid*
+replay_pid*
+
+# Kotlin compiled output
+out/
+kotlin-js-store/
+
+
+# -----------------------------------------------------------------------------
+# ANDROID SPECIFIC
+# -----------------------------------------------------------------------------
+
+# Captures (screenshots, recordings from Android Studio)
+captures/
+
+# Lint reports
+lint/
+**/lint-results*
+**/lint.xml
+
+# Navigation Safe Args generated
+**/directions/
+**/safe_args/
+
+# Room Database generated files
+# **/schemas/
+
+# DataStore proto generated
+# app/src/main/java/com/*/proto/
+
+# Hilt generated
+**/hilt_aggregated_deps/
+**/_HiltComponents*
+
+
+# -----------------------------------------------------------------------------
+# JETPACK COMPOSE
+# -----------------------------------------------------------------------------
+# Compose compiler metrics and reports
+**/compose_metrics/
+**/compose_reports/
+compose-compiler-report/
+
+
+# -----------------------------------------------------------------------------
+# TESTING
+# -----------------------------------------------------------------------------
+.coverage/
+**/jacoco/
+**/coverage/
+*.exec
+**/test-output/
+**/allure-results/
+**/allure-report/
+
+
+# -----------------------------------------------------------------------------
+# MAPS / TILE CACHE — don't commit cached map tiles
+# -----------------------------------------------------------------------------
+**/osmdroid/tiles/
+**/osmdroid/cache/
+tiles/
+map_cache/
+
+
+# -----------------------------------------------------------------------------
+# EDITOR MISC
+# -----------------------------------------------------------------------------
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# Eclipse
+.classpath
+.project
+.settings/
+bin/
+tmp/
+
+# Vim
+*.swp
+*.swo
+
+# Emacs
+*#
+.#*
+
+# JetBrains Rider / CLion
+cmake-build-*/
+
+
+# -----------------------------------------------------------------------------
+# CI/CD & MISC
+# -----------------------------------------------------------------------------
+.github/workflows/*.local.yml
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/
+fastlane/test_output/
+fastlane/readme.md
+
+# Firebase
+.firebase/
+firebase-debug.log
+firestore-debug.log
+
+# Node (if any tooling is used)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Temporary / scratch files
+*.tmp
+*.temp
+*.bak
+*.orig
+*.log
+*.pid
+scratch.*
+TODO.local.md
+NOTES.local.md
