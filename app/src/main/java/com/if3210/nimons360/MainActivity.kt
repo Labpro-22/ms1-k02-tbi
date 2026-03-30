@@ -58,7 +58,7 @@ fun Nimons360App() {
     ) {
         Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
             Greeting(
-                name = "Android",
+                name = "World",
                 modifier = Modifier.padding(innerPadding)
             )
         }
@@ -86,6 +86,6 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 @Composable
 fun GreetingPreview() {
     Nimons360Theme {
-        Greeting("Android")
+        Greeting("A")
     }
 }
