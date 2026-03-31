@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <base-config cleartextTrafficPermitted="false" />
+
+    <domain-config cleartextTrafficPermitted="false">
+        <domain includeSubdomains="true">mad.labpro.hmif.dev</domain>
+
+        <!--
+          TODO: Verify these pins against the backend's current public key set before release.
+          TODO: Add at least one backup pin for the next planned certificate/public-key rotation.
+          NOTE: These are SHA-256 Subject Public Key Info (SPKI) pins, matching OkHttp CertificatePinner format.
+        -->
+        <pin-set expiration="2027-12-31">
+            <pin digest="SHA-256">Hod//fULy4qSeaufSKJh7e9ZMoSnpkxT7N099wPNji0=</pin>
+        </pin-set>
+    </domain-config>
+</network-security-config>
