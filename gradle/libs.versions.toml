@@ -20,6 +20,9 @@ okhttp = "5.3.2"
 moshi = "1.15.2"
 room = "2.8.4"
 datastore = "1.2.1"
+securityCrypto = "1.1.0"
+androidxSqlite = "2.6.2"
+sqlcipher = "4.14.0"
 tink = "1.21.0"
 coil = "3.4.0"
 osmdroid = "6.1.20"
@@ -61,6 +64,9 @@ moshi-kotlin-codegen = { group = "com.squareup.moshi", name = "moshi-kotlin-code
 androidx-room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
 androidx-room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
 androidx-room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
+androidx-sqlite = { group = "androidx.sqlite", name = "sqlite", version.ref = "androidxSqlite" }
+androidx-security-crypto = { group = "androidx.security", name = "security-crypto", version.ref = "securityCrypto" }
+sqlcipher-android = { group = "net.zetetic", name = "sqlcipher-android", version.ref = "sqlcipher" }
 androidx-datastore-preferences = { group = "androidx.datastore", name = "datastore-preferences", version.ref = "datastore" }
 google-tink-android = { group = "com.google.crypto.tink", name = "tink-android", version.ref = "tink" }
 coil-compose = { group = "io.coil-kt.coil3", name = "coil-compose", version.ref = "coil" }

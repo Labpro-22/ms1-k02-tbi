@@ -1,3 +1,7 @@
+import org.gradle.api.tasks.testing.Test
+import org.gradle.api.tasks.testing.logging.TestExceptionFormat
+import org.gradle.api.tasks.testing.logging.TestLogEvent
+
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.kotlinCompose)
@@ -65,12 +69,14 @@ dependencies {
     implementation(libs.okhttp)
     implementation(libs.okhttp.logging.interceptor)
     implementation(libs.moshi)
-    implementation(libs.moshi.kotlin)
     ksp(libs.moshi.kotlin.codegen)
 
     implementation(libs.androidx.room.runtime)
     implementation(libs.androidx.room.ktx)
     ksp(libs.androidx.room.compiler)
+    implementation(libs.androidx.sqlite)
+    implementation(libs.sqlcipher.android)
+    implementation(libs.androidx.security.crypto)
 
     implementation(libs.androidx.datastore.preferences)
     implementation(libs.google.tink.android)
@@ -89,4 +95,19 @@ dependencies {
     androidTestImplementation(libs.androidx.compose.ui.test.junit4)
     debugImplementation(libs.androidx.compose.ui.tooling)
     debugImplementation(libs.androidx.compose.ui.test.manifest)
+}
+
+tasks.withType<Test>().configureEach {
+    testLogging {
+        events = setOf(
+            TestLogEvent.STARTED,
+            TestLogEvent.PASSED,
+            TestLogEvent.SKIPPED,
+            TestLogEvent.FAILED,
+            TestLogEvent.STANDARD_OUT,
+            TestLogEvent.STANDARD_ERROR,
+        )
+        showStandardStreams = true
+        exceptionFormat = TestExceptionFormat.FULL
+    }
 }
